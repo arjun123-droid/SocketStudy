@@ -45,6 +45,29 @@ After establishing a connection, clients can send and receive data using send() 
 
 ## Use Cases of Socket Programming:
 Socket programming finds applications in various domains, including web development, file transfer protocols, online gaming, and real-time communication. It is the foundation for protocols like HTTP, FTP, and SMTP, which power the internet. Socket programming enables the development of both server and client applications, facilitating the exchange of information between devices in a networked environment.
+
+## Socket Programming Functions in Python:
+
+1.socket() The socket() function is used to create a new socket object. It acts as the main endpoint for communication between two systems in a network. Both client and server programs start by creating a socket using this function.
+
+2.bind() The bind() function connects the socket to a specific IP address and port number. It is mainly used in server programs so that clients know where to connect and communicate.
+
+3.listen() The listen() function makes the server wait for incoming connection requests from clients. It keeps the server in listening mode until a client tries to connect.
+
+4.accept() The accept() function is used by the server to accept a client connection request. Once accepted, it creates a separate socket for communication with that particular client.
+
+5.connect() The connect() function is used in client programs to establish a connection with the server using the server’s IP address and port number.
+
+6.send() The send() function transmits data or messages from one socket to another through the network. It is commonly used to send text or files.
+
+7.recv() The recv() function receives data sent by another socket. It stores the incoming message in a buffer and allows the program to process it.
+
+8.close() The close() function terminates the socket connection and releases the resources used by the socket. It is important for properly ending communication.
+
+9.sendall() The sendall() function sends the complete data continuously until all bytes are transmitted successfully. It is safer than send() for large amounts of data.
+
+10.getsockname() The getsockname() function returns the socket’s own IP address and port number. It helps in identifying the local endpoint of the connection.
+
 ## Example Use Cases:
 
 1.	Web servers: Web servers use socket programming to handle incoming HTTP requests from clients, serving web pages and content.
